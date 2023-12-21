@@ -1014,7 +1014,8 @@ footer {
 }
 
 
-.reviewsContainer{
+.reviewsContainer {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2845,6 +2846,16 @@ footer {
 
 @media (max-width: 430px) {
 
+    .OptionsCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 42%;
+        background-color: #a200ff;
+        border-radius: 12px;
+        margin: 10px;
+    }
+
     .createOrderProducts {
         display: flex;
         flex-direction: column;
@@ -2853,7 +2864,7 @@ footer {
     }
 
     .titleSnowboards {
-        font-size: 5rem;
+        /* font-size: 5rem; */
         color: white;
         text-shadow: 0 0 8px black;
         margin-bottom: 103px;
@@ -2889,17 +2900,6 @@ footer {
         margin-top: 10px;
         font-size: 25px;
     }
-
-    .OptionsCards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 47%;
-        background-color: #a200ff;
-        border-radius: 12px;
-        margin: 10px;
-    }
-    
     
 
     .similarProduct h4 {
@@ -2949,6 +2949,11 @@ footer {
 
     .averageRating{
         font-size: 25px;
+    }
+
+    .text-title {
+        font-size: 28px;
+        font-weight: bold;
     }
 }
 
