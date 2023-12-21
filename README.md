@@ -19,4 +19,4 @@ The Higen page offers a range of winter sports products, including snowboards, s
 
 For further details on Higen's functionality and operation, please refer to the source code or contact the development team.
 
-To visit the Higen page, [click here](https://example.com/higen).
+To visit the Higen page, [click here](https://higen.onrender.com).
