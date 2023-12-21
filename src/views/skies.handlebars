@@ -1,0 +1,124 @@
+<div class="wrapper">
+    <div class="homeNavBar">
+        <div class="titleHeader">
+            <h3 >Higen</h3>
+            <img class="headerLogo" src="/img/logoMountain.png" alt="logo pagina">
+        </div>
+        <div class="menuMovile">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+        
+        <div class="closeMenuMovile">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+        <nav class="navBar">        
+            <button id="homeButton" class="buttonNav">
+                <span>Home</span>
+            </button>
+            <button id="snowboardsButton" class="buttonNav">
+                <span>Snowboards</span>
+            </button>
+            <button id="skiesButton" class="buttonNav">
+                <span>Skis</span>
+            </button>
+            <button id="skipoles" class="buttonNav">
+                <span>Ski poles</span>
+            </button>
+        </nav>
+        <button data-quantity="0" class="btn-cart">
+          <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
+            <title>icon-cart</title>
+            <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+          </svg>
+          <span class="quantity"></span>
+        </button>
+    </div>
+        
+    <header>
+        <img src="/img/skiesBackground.webp" alt="mountain" class="background">
+        <h1 class="titleSnowboards animate__animated animate__zoomIn">Skis</h1>
+    </header>
+
+    <section class="snowboardCards">
+        <div class="OptionsCards">
+            <h5 class="titleFilters">Skis</h5>
+            <div class="filterOpcions">
+                <h6 class="filtersTitle">Filters</h6>
+                <label class="cyberpunk-checkbox-label">
+                    <input type="checkbox" class="cyberpunk-checkbox" value="PriceUp">
+                    Price Up
+                </label>
+                <label class="cyberpunk-checkbox-label">
+                    <input type="checkbox" class="cyberpunk-checkbox"  value="PriceDown">
+                    Price down
+                </label>
+                <label class="cyberpunk-checkbox-label">
+                    <input type="checkbox" class="cyberpunk-checkbox" value="Newest">
+                    Newest
+                </label>
+            </div>
+        </div>
+
+        <div class="cards">
+            {{#each products}}
+                <div class="cardProduct" style="background-image: url('../img/products/{{imageFront}}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                    <div class="card-details">
+                        <p class="text-title">{{title}}</p>
+                        <p class="text-body">{{price}} usd</p>
+                    </div>
+                    <a class="card-button" href="/product/{{_id}}">More info</a>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section class="aboutSection">
+        <div class="aboutContent">
+            <h2>Experience the Peak of Skiing Excellence</h2>
+            <p>
+                In the realm of skiing excellence, our collection stands tall as a testament to uncompromised quality and unparalleled experience. Each ski is meticulously crafted, a fusion of artistry and engineering, ensuring an exceptional performance on the snow-laden slopes. Our commitment to delivering top-tier products is evident in every detail. From the cutting-edge materials that form the core to the precise engineering behind each curve, our skis are a symphony of innovation and durability. Crafted for seasoned professionals and aspiring enthusiasts alike, they epitomize the pinnacle of skiing mastery. Whether you seek the thrill of fresh powder or the challenge of steep descents, our skis embody the perfect balance between control and agility. Designed to enhance your prowess on the mountains, they bring forth an unmatched experience that embraces both precision and exhilaration. Our dedication to perfecting the skiing experience extends beyond the tangible; it is an ethos reflected in the heart and soul of every ski we offer. Dive into our range of meticulously designed skis and discover a world where craftsmanship meets adventure, where precision meets excitement, and where every slope becomes an opportunity for boundless exploration and mastery.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="newsletterSnowboards">
+        <div class="newsletter">
+            <h4 class="titleNewsletter">Join our nesletter for skis offers</h4>
+            <input placeholder="Email" type="email" name="text" class="input" id="emailInput">
+            <button class="buttonNewsletter" id="subscribeButton">
+                <p>Subscribe</p>
+                <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="direccionFooter">
+            <h3 style="color: white;">+5491165480369</h3>
+            <h3 style="color: white;">Mateoivanovich43@gmail.com</h3>
+            <h3 style="color: white;">Buenos Aires, Argentina</h3>
+
+        </div>
+        <div class="footerDerechos" ><h3 style="color: white;">© 2023 Higen. All rights reserved. - Mateo Ivanovich</h3></div>
+        <div>
+            <button class="buttonLinkedin">
+                <a href="https://www.linkedin.com/in/mateo-ivanovich-232941227/" target="_blank" class="no-link-style">
+                    <svg viewBox="55.005 23.8289 333.061 333.0491" width="65" height="65" xmlns="http://www.w3.org/2000/svg">
+                <path id="Path_2520" data-name="Path 2520" d="M 338.789 307.609 L 289.44 307.609 L 289.44 230.326 C 289.44 211.898 289.111 188.174 263.773 188.174 C 238.07 188.174 234.138 208.253 234.138 228.985 L 234.138 307.604 L 184.788 307.604 L 184.788 148.679 L 232.164 148.679 L 232.164 170.398 L 232.827 170.398 C 242.491 153.881 260.452 144.017 279.57 144.726 C 329.587 144.726 338.809 177.626 338.809 220.426 L 338.789 307.609 Z M 129.106 126.955 C 107.063 126.96 93.281 103.098 104.298 84.006 C 115.319 64.909 142.877 64.909 153.904 83.996 C 156.418 88.35 157.739 93.29 157.739 98.312 C 157.744 114.13 144.923 126.955 129.106 126.955 M 153.781 307.609 L 104.38 307.609 L 104.38 148.679 L 153.781 148.679 L 153.781 307.609 Z M 363.391 23.851 L 79.582 23.851 C 66.17 23.702 55.169 34.446 55.005 47.858 L 55.005 332.844 C 55.164 346.266 66.165 357.02 79.582 356.876 L 363.391 356.876 C 376.839 357.046 387.881 346.292 388.066 332.844 L 388.066 47.837 C 387.876 34.4 376.834 23.656 363.391 23.831" fill="#0b65c2" style="" transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -3.552713678800501e-15)"></path>
+                </svg>
+                </a>
+            </button><br>
+        </div>
+    </footer>
+</div>
+
+<script src="/js/shared.js"></script>
+<script src="/js/skies.js"></script>

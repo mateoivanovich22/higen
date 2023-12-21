@@ -1,0 +1,192 @@
+<div class="wrapper">
+    <div class="homeNavBar">
+        <div><img class="headerLogo" src="/img/logoMountain.png" alt="logo pagina"></div>
+        <div class="menuMovile">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+
+        <div class="closeMenuMovile">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+        <nav class="navBar">           
+            <button id="homeButton" class="buttonNav">
+                <span>Home</span>
+            </button>
+            <button id="snowboardsButton" class="buttonNav">
+                <span>Snowboards</span>
+            </button>
+            <button id="skiesButton" class="buttonNav">
+                <span>Skis</span>
+            </button>
+            <button id="skipoles" class="buttonNav">
+                <span>Ski poles</span>
+            </button>
+        </nav>
+        <button data-quantity="0" class="btn-cart">
+          <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
+            <title>icon-cart</title>
+            <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+          </svg>
+          <span class="quantity"></span>
+        </button>
+    </div>
+        
+    <header>
+        <img src="/img/homeBack.jpg" alt="mountain" class="background">
+        <h1 class="title animate__animated animate__fadeInTopLeft">Higen</h1>
+    </header>
+
+    <section class="sectionCategories">
+        <div class="containerAboutUs">
+            <h2 class="titleAboutHigen">About us..</h2>
+            <p class="aboutHigen">Higen is a company that has taken the winter sports experience to new heights. Our passion for excellence is reflected in each of our products, from skis to ski poles and snowboards. At Higen, we believe in the constant pursuit of perfection, and this translates into the premium quality we offer to our customers.</p>
+        </div>
+    </section>
+    <section class="sectionCategories">
+        <div class="containerCategories">
+            <h2 class="titleCategories">Categories..</h2>
+            <div class="categories">
+                <div class="snowboardCategory">
+                    <h5>Snowboards</h5>
+                </div>
+                <div class="skiesCategory">
+                    <h5>Skis</h5>
+                </div>
+                <div class="skiPoleCategory">
+                    <h5>Ski poles</h5>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <section class="sectionEnvioyDevolucion">
+        <div>
+            <h2 class="homeSectionTitles">Snowboards</h2>
+            <p class="textCategory" >Explore your passion for the mountains with our exceptional line of snowboards. At Higen, we take pride in offering quality snowboards designed to conquer any terrain and elevate your snow adventures. From versatile models for beginners to high-performance boards for experts, our snowboards are synonymous with durability, style, and an exhilarating ride with every turn.</p>
+        </div>
+    </section>
+    <section class="containerTopProducts">
+        <div style="display: flex; flex-direction: column; ">
+            <h4 class="tituloNewest">Newest snowboards..</h4>
+            <div class="latestProducts">
+                {{#each products.snowboards}}
+                    <div class="card-container">
+                        <div class="card">
+                            <a href="/product/{{_id}}" class="detailsHomeProducts">
+                                <div class="front-content" style="background-image: url('../img/products/{{imageFront}}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <p>{{title}}</p>
+                                </div>
+                                <div class="content">
+                                    <p class="heading">{{title}}</p>
+                                    <p>
+                                        {{price}} usd
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section class="sectionEnvioyDevolucion">
+        <div>
+            <h2 class="homeSectionTitles">Skis</h2>
+            <p class="textCategory" >Embark on an unforgettable mountain experience with our innovative skis. Higen presents you with a cutting-edge collection of skis designed to conquer the most challenging slopes. Whether you're a speed enthusiast, a freestyle skier, or someone who enjoys exploring the backcountry, our skis provide precision, stability, and outstanding performance with every descent.</p>
+        </div>
+    </section>
+    <section class="containerTopProducts">
+        <div style="display: flex; flex-direction: column ;">
+            <h4 class="tituloNewest" >Newest Skis..</h4>
+            <div class="latestProducts">
+                {{#each products.skis}}
+                    <div class="card-container">
+                        <div class="card">
+                            <a href="/product/{{_id}}" class="detailsHomeProducts">
+                                <div class="front-content" style="background-image: url('../img/products/{{imageFront}}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <p>{{title}}</p>
+                                </div>
+                                <div class="content">
+                                    <p class="heading">{{title}}</p>
+                                    <p>
+                                        {{price}} usd
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section class="sectionEnvioyDevolucion">
+        <div>
+            <h2 class="homeSectionTitles">Ski Poles</h2>
+            <p class="textCategory">Our ski poles are designed to provide the perfect balance between lightweight construction and strength, allowing you to ski with confidence and style. Higen takes pride in offering a wide range of ski poles that cater to different styles and preferences. Whether you need poles for racing, freeriding, or simply for a fun day on the mountain, our ski poles are the perfect choice for your next trip to the slopes.</p>
+        </div>
+    </section>
+    <section class="containerTopProducts">
+        <div style="display: flex; flex-direction: column ;">
+            <h4 class="tituloNewest" >Newest Ski Poles..</h4>
+            <div class="latestProducts">
+                {{#each products.skiPoles}}
+                    <div class="card-container">
+                        <div class="card" >
+                            <a href="/product/{{_id}}" class="detailsHomeProducts">
+                                <div class="front-content" style="background-image: url('../img/products/{{imageFront}}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <p>{{title}}</p>
+                                </div>
+                                <div class="content">
+                                    <p class="heading">{{title}}</p>
+                                    <p>
+                                        {{price}} usd
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    <section class="sectionEnvioyDevolucion">
+        <div class="logos" >
+            <div class="logosShipment">
+                <img src="/img/envios.png" alt="logo de envios">
+                <p>Free shipping!</p>
+            </div>
+            <div class="logosShipment">
+                <img src="/img/garantia.png" alt="logo de garantia">
+                <p>Loyalty Program!</p>
+            </div>
+            <div class="logosShipment">
+                <img src="/img/descuentos.png" alt="logo de descuentos">
+                <p>Gifts with Purchase!</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="direccionFooter">
+            <h3 style="color: white;">+5491165480369</h3>
+            <h3 style="color: white;">Mateoivanovich43@gmail.com</h3>
+            <h3 style="color: white;">Buenos Aires, Argentina</h3>
+
+        </div>
+        <div class="footerDerechos" ><h3 style="color: white;">© 2023 Higen. All rights reserved. - Mateo Ivanovich</h3></div>
+        <div>
+            <button class="buttonLinkedin">
+                <a href="https://www.linkedin.com/in/mateo-ivanovich-232941227/" target="_blank" class="no-link-style">
+                    <svg viewBox="55.005 23.8289 333.061 333.0491" width="65" height="65" xmlns="http://www.w3.org/2000/svg">
+                <path id="Path_2520" data-name="Path 2520" d="M 338.789 307.609 L 289.44 307.609 L 289.44 230.326 C 289.44 211.898 289.111 188.174 263.773 188.174 C 238.07 188.174 234.138 208.253 234.138 228.985 L 234.138 307.604 L 184.788 307.604 L 184.788 148.679 L 232.164 148.679 L 232.164 170.398 L 232.827 170.398 C 242.491 153.881 260.452 144.017 279.57 144.726 C 329.587 144.726 338.809 177.626 338.809 220.426 L 338.789 307.609 Z M 129.106 126.955 C 107.063 126.96 93.281 103.098 104.298 84.006 C 115.319 64.909 142.877 64.909 153.904 83.996 C 156.418 88.35 157.739 93.29 157.739 98.312 C 157.744 114.13 144.923 126.955 129.106 126.955 M 153.781 307.609 L 104.38 307.609 L 104.38 148.679 L 153.781 148.679 L 153.781 307.609 Z M 363.391 23.851 L 79.582 23.851 C 66.17 23.702 55.169 34.446 55.005 47.858 L 55.005 332.844 C 55.164 346.266 66.165 357.02 79.582 356.876 L 363.391 356.876 C 376.839 357.046 387.881 346.292 388.066 332.844 L 388.066 47.837 C 387.876 34.4 376.834 23.656 363.391 23.831" fill="#0b65c2" style="" transform="matrix(1, 0, 0, 1, -7.105427357601002e-15, -3.552713678800501e-15)"></path>
+                </svg>
+                </a>
+            </button><br>
+        </div>
+    </footer>
+</div>
+
+<script src="/js/home.js"></script>
